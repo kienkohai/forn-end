@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>web game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/logo.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/init.js"></script>
+    <script>
+        window.onload = function(){
+            loadMenu();
+        }
+    </script>
+    <script>
+        // Function to add a new comment
+        function addComment() {
+            const commentInput = document.getElementById('comment-input');
+            const commentList = document.getElementById('comment-list');
+
+            if (commentInput.value.trim() !== "") {
+                const newComment = document.createElement('li');
+                newComment.className = 'comment-item';
+                newComment.textContent = commentInput.value;
+                commentList.appendChild(newComment);
+                commentInput.value = ""; // Clear the input box after adding the comment
+            } else {
+                alert('Vui lòng nhập nội dung bình luận!');
+            }
+        }
+
+        // Function to initialize the comment list with a pre-existing comment
+        function initComments() {
+            const commentList = document.getElementById('comment-list');
+            const preExistingComment = document.createElement('li');
+            preExistingComment.className = 'comment-item';
+            preExistingComment.textContent = 'game nhu cc';
+            commentList.appendChild(preExistingComment);
+        }
+
+        // Initialize comments on page load
+        window.onload = initComments;
+    </script>
+    <header>
+        <script>
+            window.onload = function(){
+                loadMenu();
+            }
+        </script>
+    </header>
+</head>
+<body>
+    <div class="header" id="header"></div>
+
+
+    <div class="contentmain">
+        <div class="container containerdetail">
+            <div class="row">
+                <div class="col-sm-9">
+
+                    <div class="listimagedetail" id="listimagedetail">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
+
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="image/elden1.jpg" class="d-block w-100 imgdetaills" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="image/elden2.jpg" class="d-block w-100 imgdetaills" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="image/elden3.jpg" class="d-block w-100 imgdetaills" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="image/elden4.jpg" class="d-block w-100 imgdetaills" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="tieudedetail" id="tieudedetail">Mua ELDEN RING Shadow of the Erdtree Deluxe Edition</h3>
+                    <span class="tenduandetail" id="daxacthucdt"></span>
+                    <span class="tenduandetail" id="tenduandetail"></span>
+                    <div class="thongtinchitiet">
+                        <div class="row">
+                            <div class="col-sm-3 col-6 thongtinchitiet-content">
+                                <span class="lbmucgia">Mức giá</span>
+                                <span class="lbgia" id="mucgiact">1.690.000₫</span>
+                            </div>
+                            <div class="col-sm-6 col-12 thongtinchitiet-right">
+                            <button onclick="addToCart()" id="addToCart"><p>Thêm vào giỏ hàng</p></button>
+                            <div id="cartNotification" style="display:none; position:fixed; bottom:20px; right:20px; background:green; color:white; padding:10px; border-radius:5px;">Đã thêm vào giỏ hàng</div>
+                            <script>function addToCart() {
+                            document.getElementById('cartNotification').style.display = 'block'; // Display cart notification
+                            }</script>
+                                <button onclick="copyUrl()" type="button" class="buyempty" data-bs-toggle="tooltip" data-bs-placement="top" title="Chia sẻ" id="addToCart">
+                                    <i class="fa fa-share"></i>
+                                </button>
+                                <button type="button" id="buyyeuthichct" class="buyempty" data-bs-toggle="tooltip" data-bs-placement="top" title="Yêu thích" id="addToCart">
+                                    <i id="yeuthichchitiet" class="fa fa-heart heartdetail active"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="ttmota">Thông tin mô tả</h4>
+                    <div class="noidungmota" id="noidungmota"><pre>
+THE NEW FANTASY ACTION RPG.
+Rise, Tarnished, and be guided by grace to brandish the power of the 
+Elden Ring and become an Elden Lord in the Lands Between.
+• A Vast World Full of Excitement
+    A vast world where open fields with a variety of situations and huge
+    dungeons with complex and three-dimensional designs are seamlessly
+    connected. As you explore, the joy of discovering unknown and 
+    accomplishment. overwhelming threats await you, leading to a high
+    sense of
+• Create your Own Character
+    In addition to customizing the appearance of your character, you can
+    freely combine the weapons, armor, and magic that you equip. You can
+    develop your character according to your play style, such as 
+    increasing your muscle strength <div class=""></div>
+ to become a strong warrior, or mastering magic.
+• An Epic Drama Born from a Myth
+    A multilayered story told in fragments. An epic drama in which the 
+    various thoughts of the characters intersect in the Lands Between.
+• Unique Online Play that Loosely Connects You to Others
+    In addition to multiplayer, where you can directly connect with other
+    players and travel together, the game supports a unique asynchronous 
+    online element that allows you to feel the presence of others.</pre></div>
+                    <h4 class="ttmota">YÊU CẦU HỆ THỐNG</h4>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <table class="table">
+                                <tr><th class="thtienich">TỐI THIỂU:</th></tr>
+                                <tr><th class="thtienich">HĐH</th><td id="trhdh">Windows 10</td></tr>
+                                <tr><th class="thtienich">Bộ xử lý</th><td id="trcpu">INTEL CORE I5-8400 or AMD RYZEN 3 3300X</td></tr>
+                                <tr><th class="thtienich">Bộ nhớ</th><td id="trram">12 GB RAM</td></tr>
+                                <tr><th class="thtienich">Đồ họa</th><td id="trgpu">NVIDIA GEFORCE GTX 1060 3 GB or AMD RADEON RX 580 4 GB</td></tr>
+                                <tr><th class="thtienich">DirectX</th><td id="trdirectx">Phiên bản 12</td></tr>
+                                <tr><th class="thtienich">Lưu trữ</th><td id="trstorage">60 GB chỗ trống khả dụng</td></tr>
+                                <tr><th class="thtienich">Card âm thanh</th><td id="trsound">Windows Compatible Audio Device</td></tr>
+                            </table>
+                        </div>
+                        <div class="col-sm-6">
+                            <table class="table">
+                                <tr><th>KHUYẾN NGHỊ </th></tr>
+                                <tr><th class="thtienich">HĐH</th><td id="trhdh-recommend">Windows 10/11</td></tr>
+                                <tr><th class="thtienich">Bộ xử lý</th><td id="trcpu-recommend">INTEL CORE I7-8700K or AMD RYZEN 5 3600X</td></tr>
+                                <tr><th class="thtienich">Bộ nhớ</th><td id="trram-recommend">16 GB RAM</td></tr>
+                                <tr><th class="thtienich">Đồ họa</th><td id="trgpu-recommend">NVIDIA GEFORCE GTX 1070 8 GB or AMD RADEON RX VEGA 56 8 GB</td></tr>
+                                <tr><th class="thtienich">DirectX</th><td id="trdirectx-recommend">Phiên bản 12</td></tr>
+                                <tr><th class="thtienich">Lưu trữ</th><td id="trstorage-recommend">60 GB chỗ trống khả dụng</td></tr>
+                                <tr><th class="thtienich">Card âm thanh</th><td id="trsound-recommend">Windows Compatible Audio Device</td></tr>
+                            </table>
+                        </div>
+                        <div class="comment-section">
+                            <h2>Bình luận</h2>
+                            <textarea id="comment-input" class="comment-box" placeholder="Nhập bình luận của bạn..."></textarea>
+                            <button onclick="addComment()">Thêm bình luận</button>
+                            <ul id="comment-list" class="comment-list"></ul>
+                        </div>
+                    </div>
+                    </div>
+                <div class="col-sm-3">
+                    <div class="ttlienhe">
+                        <span class="spdangboi">nhà phát triển</span>
+                        <span class="nguoidang" id="nguoidangbv">
+                            FromSoftware Inc.</span>
+                        <span class="nguoidang">NHÀ PHÁT HÀNH</span>
+                            <span>FromSoftware Inc., Bandai Namco Entertainment</span>
+                            <span class="nguoidang">Đánh giá: Rất tích cực </span>
+
+                        <button id="buyxemthongtin" class="buychatzalo">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</html>

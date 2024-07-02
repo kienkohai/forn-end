@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>web game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/logo.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/init.js"></script>
+    <script>
+        window.onload = function(){
+            loadMenu();
+        }
+    </script>
+    <script>
+        function addComment() {
+            const commentInput = document.getElementById('comment-input');
+            const commentList = document.getElementById('comment-list');
+
+            if (commentInput.value.trim() !== "") {
+                const newComment = document.createElement('li');
+                newComment.className = 'comment-item';
+                newComment.textContent = commentInput.value;
+                commentList.appendChild(newComment);
+                commentInput.value = ""; // Clear the input box after adding the comment
+            } else {
+                alert('Vui lòng nhập nội dung bình luận!');
+            }
+        }
+        function initComments() {
+            const commentList = document.getElementById('comment-list');
+            const preExistingComment = document.createElement('li');
+            preExistingComment.className = 'comment-item';
+            preExistingComment.textContent = 'game nhu cc';
+            commentList.appendChild(preExistingComment);
+        }
+        window.onload = initComments;
+    </script>
+    <header>
+        <script>
+            window.onload = function(){
+                loadMenu();
+            }
+        </script>
+    </header>
+</head>
+<body>
+    <div class="header" id="header"></div>
+    <div class="contentmain">
+        <div class="container containerdetail">
+            <div class="row">
+                <div class="col-sm-9">
+
+                    <div class="listimagedetail" id="listimagedetail">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="image/l4d21.jpg" class="d-block w-100 imgdetaills" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="image/l4d22.jpg" class="d-block w-100 imgdetaills" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="image/l4d23.jpg" class="d-block w-100 imgdetaills" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="image/l4d24.jpg" class="d-block w-100 imgdetaills" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="tieudedetail" id="tieudedetail">Left 4 Dead 2</h3>
+                    <span class="tenduandetail" id="daxacthucdt"></span>
+                    <span class="tenduandetail" id="tenduandetail"></span>
+                    <div class="thongtinchitiet">
+                        <div class="row">
+                            <div class="col-sm-3 col-6 thongtinchitiet-content">
+                                <span class="lbmucgia">Mức giá</span>
+                                <span class="lbgia" id="mucgiact">142.000₫</span>
+                            </div>
+                            <div class="col-sm-6 col-12 thongtinchitiet-right">
+                                    <button onclick="addToCart()" id="addToCart"><p>Thêm vào giỏ hàng</p></button>
+                                    <div id="cartNotification" style="display:none; position:fixed; bottom:20px; right:20px; background:green; color:white; padding:10px; border-radius:5px;">Đã thêm vào giỏ hàng</div>
+                                    <script>function addToCart() {
+                                    document.getElementById('cartNotification').style.display = 'block'; // Display cart notification
+                                    }</script>                              
+
+                                <button onclick="copyUrl()" type="button" class="buyempty" data-bs-toggle="tooltip" data-bs-placement="top" title="Chia sẻ" id="addToCart">
+                                    <i class="fa fa-share"></i>
+                                </button>
+                                <button type="button" id="buyyeuthichct" class="buyempty" data-bs-toggle="tooltip" data-bs-placement="top" title="Yêu thích" id="addToCart">
+                                    <i id="yeuthichchitiet" class="fa fa-heart heartdetail active"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 class="ttmota">Thông tin mô tả</h4>
+                    <div class="noidungmota" id="noidungmota"><pre>
+Lấy bối cảnh tận thế zombie, Left 4 Dead 2 (L4D2) là hậu bản đầy mong chờ của 
+Left 4 Dead, trò chơi phối hợp số một đạt nhiều giải thưởng trong năm 2008.
+Trò chơi bắn súng kinh dị phối hợp góc nhìn thứ nhất này mang bạn và chiến hữu
+qua các thành phố, nghĩa địa và đầm lầy của Thâm Nam, từ Savannah tới New
+Orleans thông qua 5 chiến dịch mở rộng.
+Bạn sẽ chơi với tư cách 1 trong 4 người sống sót mới, được trang bị tận răng
+với dàn vũ khi kinh điển và cải tiến. Bên cạnh súng ống, giờ bạn cũng sẽ có
+thể trút sự giận dữ lên đám con bệnh với đủ loại vũ khí cận chiến tàn khốc,
+từ cưa máy cho đến rìu, và cả chiếc chảo cũng có thể gây chết người.
+Bạn sẽ thử dùng các vũ khí này để chống lại (hoặc nhập vai trong chế độ Đối Đầu)
+3 con bệnh đặc biệt kinh khiếp và đáng gờm mới. Bạn sẽ đồng thời chạm trán với
+năm con bệnh lạ thường, bao gồm cả Mudmen đáng sợ.
+Đưa lối chơi đậm chất hành động, dữ dội của L4D lên một tầm cao mới là AI Director
+2.0. Phiên bản cải tiến của Director giờ có thể thay đổi thời tiết bạn sẽ đối mặt
+và lộ trình bạn sẽ đi, bên cạnh khả năng điều chỉnh số lượng kẻ thù, hiệu ứng cùng
+âm thanh cho phù hợp với năng lực của bạn. L4D2 hứa hẹn đem đến một trải nghiệm thỏa
+mãn với nhiều thử thách độc lạ mỗi khi chơi, được tùy chỉnh cho phù hợp với phong
+cách chơi của bạn.
+Trò chơi hành động phối hợp thế hệ mới từ nhà sáng tạo của Half-Life, Portal, Team
+Fortress và Counter-Strike.
+ - Hơn 20 vũ khí & trang bị mới, nổi bật là hơn 10 vũ khí cận chiến – rìu, máy cưa,
+chảo, gậy gộc – cho phép bạn tiếp cận gần hơn lũ zombie
+ - Người sống sót mới. Cốt truyện mới. Câu thoại mới.
+ - 5 chiến dịch mở rộng cho các chế độ chơi phối hợp, Đối đầu và Sinh tồn.
+ - Chế độ chơi nhiều người hoàn toàn mới.
+ - Cơn bệnh lạ thường. 5 chiến dịch mới, mỗi cái có ít nhất một loại zombie bị
+nhiễm bệnh lạ thường mới chỉ dành riêng cho chiến dịch đó.
+ - AI Director 2.0: Công nghệ tiên tiến hay còn gọi là AI Director định hình lối chơi
+độc đáo của L4D – tùy chỉnh số lượng kẻ thù, hiệu ứng và âm nhạc theo trình độ của
+người chơi. L4D2 giới thiệu AI Director 2.0, nay mở rộng khả năng của Director để
+tùy chỉnh thiết kế màn chơi, đồ vật, thời tiết và ánh sáng để phản ánh thời điểm khác
+nhau trong ngày.
+ - Thống kê, xếp hạng và hệ thống phần thưởng khuyến khích lối
+chơi phối hợp</pre></div>
+                    <h4 class="ttmota">YÊU CẦU HỆ THỐNG</h4>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <table class="table">
+                                <tr><th>TỐI THIỂU:</th></tr>
+                                <tr><th>HĐH</th><td>Windows® 7/ Vista/ XP</td></tr>
+                                <tr><th>Bộ xử lý</th><td>Pentium 4 3.0GHz</td></tr>
+                                <tr><th>Bộ nhớ</th><td>2 GB RAM</td></tr>
+                                <tr><th>Đồ họa</th><td>Video card with 128 MB, Shader model 2.0</td></tr>
+                                <tr><th>DirectX</th><td>Phiên bản 9.0c</td></tr>
+                                <tr><th>Lưu trữ</th><td>13 GB chỗ trống khả dụng</td></tr>
+                                <tr><th>Card âm thanh</th><td>DirectX 9.0c compatible sound card</td></tr>
+                            </table>
+                        </div>
+                        <div class="col-sm-6">
+                            <table class="table">
+                                <tr><th>KHUYẾN NGHỊ </th></tr>
+                                <tr><th>HĐH</th><td>Windows® 7/ Vista/ XP</td></tr>
+                                <tr><th>Bộ xử lý</th><td>Intel core 2 duo 2.4GHz</td></tr>
+                                <tr><th>Bộ nhớ</th><td>2 GB RAM</td></tr>
+                                <tr><th>Đồ họa</th><td>Video Card Shader model 3.0</td></tr>
+                                <tr><th>DirectX</th><td>Phiên bản 9.0c</td></tr>
+                                <tr><th>Lưu trữ</th><td>13 GB chỗ trống khả dụng</td></tr>
+                                <tr><th>Card âm thanh</th><td>DirectX 9.0c compatible sound card</td></tr>
+                            </table>
+                        </div>                        
+                        <div class="comment-section">
+                            <h2>Bình luận</h2>
+                            <textarea id="comment-input" class="comment-box" placeholder="Nhập bình luận của bạn..."></textarea>
+                            <button onclick="addComment()">Thêm bình luận</button>
+                            <ul id="comment-list" class="comment-list"></ul>
+                        </div>
+                    </div>
+                    </div>
+                <div class="col-sm-3">
+                    <div class="ttlienhe">
+                        <span class="spdangboi">nhà phát triển</span>
+                        <span class="nguoidang" id="nguoidangbv">
+                            Valve</span>
+                        <span class="nguoidang">NHÀ PHÁT HÀNH</span>
+                            <span>Valve</span>
+                            <span class="nguoidang">Đánh giá: Rất tích cực </span>
+
+                        <button id="buyxemthongtin" class="buychatzalo">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</html>

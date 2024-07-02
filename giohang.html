@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/giohang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="logo"onclick="goToIndex()">
+              <img src="image/3.png" alt="">
+              <div onclick=""></div>
+
+            </div>
+              <script>
+                function goToIndex() {
+                window.location.href = 'index.html';
+            }</script>
+            <ul>
+                <li class="active"><a href="index.html"><i class="fa-solid fa-house-user"></i> Home</a></li>
+                <li><i class="fa-regular fa-user"></i> User</li>
+                <li><i class="fa-solid fa-heart"></i> Favourite</li>
+            </ul>
+            <!-- <ul>
+                <li><i class="fa-brands fa-tiktok"></i> Tiktok</li>
+                <li><i class="fa-brands fa-facebook"></i> Facebook</li>
+                <li><i class="fa-brands fa-instagram"></i> Instagram</li>
+            </ul>-->
+        </div>
+        <div class="center">
+            <div class="search">
+                <div class="form">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search...">
+                    <button>Search</button>
+                </div>
+            </div>
+
+            <h2>PRODUCTS</h2>
+            <div class="list">
+                <div class="item" data-key="1">
+                    <div class="img">
+                        <img src="image/2.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="title">ELDEN RING</div>
+                        <div class="des">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                             Labore animi voluptatum, odio sed libero ipsa?
+                        </div>
+                        <div class="price">1690.000 đ</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <button class="add">Add to cart</button>
+                        <button class="remove" onclick="Remove(1)"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+
+                <div class="item" data-key="2">
+                    <div class="img">
+                      <img src="image/cs0.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="title">Counter-Strike 2 Prime</div>
+                        <div class="des">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                             Labore animi voluptatum, odio sed libero ipsa?
+                        </div>
+                        <div class="price">375.000₫</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <button class="add">Add to cart</button>
+                        <button class="remove" onclick="Remove(2)"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+
+                <div class="item" data-key="3">
+                    <div class="img">
+                      <img src="image/l4d2.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="title">Left 4 Dead 2</div>
+                        <div class="des">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                             Labore animi voluptatum, odio sed libero ipsa?
+                        </div>
+                        <div class="price">142.000₫</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <button class="add">Add to cart</button>
+                        <button class="remove" onclick="Remove(3)"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+                
+                <div class="item" data-key="4">
+                    <div class="img">
+                      <img src="image/2.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="title">ELDEN RING</div>
+                        <div class="des">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                             Labore animi voluptatum, odio sed libero ipsa?
+                        </div>
+                        <div class="price">1690.000 đ</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <button class="add">Add to cart</button>
+                        <button class="remove" onclick="Remove(4)"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart">
+            <div class="name">CART</div>
+            <div class="listCart"></div>
+            <div class="total">
+                <span>Tổng :<span id="totalPrice">0.000 </span><span>đ</span></span>
+            </div>
+            <button class="buy" onclick="buyItems()">
+                Pay
+                <svg class="svgIcon" viewBox="0 0 576 512"><path d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z"></path></svg>
+              </button>
+            <div class="notification" id="notification" style="display:none; position:fixed; top:10px; right:10px; background-color:green; color:white; padding:10px; border-radius:5px;">
+                Mua thành công!
+            </div>
+        </div>
+        <script>
+            function buyItems() {
+                document.querySelector('.listCart').innerHTML = '';
+                document.getElementById('totalPrice').innerText = '0.00';
+                const notification = document.getElementById('notification');
+                notification.style.display = 'block';
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 3000);
+            }
+        </script>
+
+<script>
+    let list = document.querySelectorAll('.list .item');
+list.forEach(item => {
+    item.addEventListener('click', function(event){
+        if(event.target.classList.contains('add')){
+            var itemNew = item.cloneNode(true);
+            let checkIsset  = false;
+
+            let listCart = document.querySelectorAll('.cart .item');
+            listCart.forEach(cart =>{
+                if(cart.getAttribute('data-key') == itemNew.getAttribute('data-key')){
+                    checkIsset = true;
+                    cart.classList.add('danger');
+                    setTimeout(function(){
+                        cart.classList.remove('danger');
+                    },1000)
+                }
+            })
+            if(checkIsset == false){
+                document.querySelector('.listCart').appendChild(itemNew);
+            }
+            updateTotal(); // Update total price
+        }
+    });
+});
+
+function Remove($key){
+    let listCart = document.querySelectorAll('.cart .item');
+    listCart.forEach(item => {
+        if(item.getAttribute('data-key') == $key){
+            item.remove();
+            updateTotal(); // Update total price
+            return;
+        }
+    });
+}
+
+function updateTotal() {
+    let totalPrice = 0;
+    document.querySelectorAll('.cart .item').forEach(item => {
+        const price = parseFloat(item.querySelector('.price').textContent.replace('$', ''));
+        const count = parseInt(item.querySelector('.count').value);
+        totalPrice += price * count;
+    });
+    document.getElementById('totalPrice').textContent = totalPrice.toFixed(2);
+}
+let cart = [];
+
+function addToCart(item) {
+    cart.push(item);
+    renderCart();
+}
+
+function removeFromCart(itemKey) {
+    cart = cart.filter(item => item.key !== itemKey);
+    renderCart();
+}
+
+function renderCart() {
+    const listCart = document.querySelector('.listCart');
+    listCart.innerHTML = '';
+    let totalPrice = 0;
+    
+    cart.forEach(item => {
+        const cartItem = document.createElement('div');
+        cartItem.innerHTML = `
+            <div>${item.title} - ${item.price}</div>
+            <div>Quantity: ${item.quantity}</div>
+            <button onclick="removeFromCart(${item.key})">Remove</button>
+        `;
+        listCart.appendChild(cartItem);
+        totalPrice += item.price * item.quantity;
+    });
+    
+    document.getElementById('totalPrice').innerText = totalPrice.toFixed(2);
+}
+</script>
+</body>
+</html>

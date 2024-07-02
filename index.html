@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>web game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/logo.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/init.js"></script>
+    <header>
+    <script>
+        window.onload = function(){
+            loadMenu();
+        }
+    </script></header>
+</head>
+<body>
+    <div class="header" id="header"></div>
+
+    <div class="contentmain">
+        <div class="container">
+            <form action="javascript:void(0);" class="searchmain col-sm-12">
+                <div class="searchmain-top">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="formsearchborder">
+                                <select name="phobien" id="phobien" class="formsearch" >
+                                    <option value="">Độ phổ biến</option>
+                                    <option value="chơi nhiều">chơi nhiều</option>
+                                    <option value="bán chạy">bán chạy</option>                          
+                                    <option value="chơi miễn phí">chơi miễn phí</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="formsearchborder">
+                                <select name="congdong" id="congdong" class="formsearch">
+                                    <option value="">cộng đồng</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="formlienhe">
+                                <input id="searchInput" name="search" type="text" class="formsearch" placeholder="Nhập từ khóa: tên game">
+                                <button id="searchButton" class="sendem btnsearchtop">Tìm kiếm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="searchmain-bottom">
+                    <div class="row">
+                        <div class="col-2">
+                            <select name="mucgia" id="mucgiasearch" class="selectsearch">
+                                <option value="">Mức giá</option>
+                                <option value="">dưới 100.000 VND</option>
+                                <option value="">dưới 200.000 VND</option>
+                                <option value="">dưới 500.000 VND</option>
+
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            <select name="theloai" id="theloaisearch" class="selectsearch">
+                                <option value="">thể loại</option>
+                                <option value="">bắn súng</option>
+                                <option value="">nhập vai</option>
+                                <option value="">chiến thuật</option>
+
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            <select name="dacbiet" id="dacbietsearch" class="selectsearch">
+                                <option value="">mục đăc biệt</option>
+                                <option value="">demo</option>                          
+                                <option value="">chơi miễn phí</option>
+                                <option value="">truy cập sớm</option>
+                            </select>
+                        </div>
+                        <div class="col-2">
+                            <select name="chude" id="chudesearch" class="selectsearch">
+                                <option value="">chủ đề</option>
+                                <option value="">ki dị</option>
+                                <option value="">sinh tồn</option>                          
+                                <option value="">anime</option>
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </div>
+        <div class="divbdsindex">
+            <div class="container">
+                <h3>Game dành cho bạn</h3>
+                <div class="row" id="dsbdstrangchu">
+                    <div class="col-sm-3">
+                        <div class="singlebds">
+                            <a href="chitiet2.html"><img src="image/l4d2.jpg" class="imgdbs"></a>
+                            <div class="contentbds">
+                                <a href="chitiet2.html" class="titlebdssingle">Left 4 Dead 2</a>
+                                <div class="divprice">
+                                    <span class="pricebds">142.000 ₫</span>
+                                    <span class="pricebds areabds"><sup></sup> </span>
+                                </div>
+                                <span class="diachibds">Valve</span>
+                                <div class="divtimebds">
+                                    <span class="timedangbds">17 Tháng11 năm 2009</span>
+                                    <button class="btnyeuthich"><i class="fa fa-heart active"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="singlebds">
+                            <a href="chitiet2.html"><img src="image/l4d2.jpg" class="imgdbs"></a>
+                            <div class="contentbds">
+                                <a href="chitiet2.html" class="titlebdssingle">Left 4 Dead 2</a>
+                                <div class="divprice">
+                                    <span class="pricebds">142.000 ₫</span>
+                                    <span class="pricebds areabds"><sup></sup> </span>
+                                </div>
+                                <span class="diachibds">Valve</span>
+                                <div class="divtimebds">
+                                    <span class="timedangbds">17 Tháng11 năm 2009</span>
+                                    <button class="btnyeuthich"><i class="fa fa-heart active"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="singlebds">
+                            <a href="chitiet.html"><img src="image/2.jpg" class="imgdbs"></a>
+                            <div class="contentbds">
+                                <a href="chitiet.html" class="titlebdssingle">ELDEN RING Shadow of the Erdtree</a>
+                                <div class="divprice">
+                                    <span class="pricebds">1.690.000 đ</span>
+                                    <span class="pricebds areabds"><sup></sup> </span>
+                                </div>
+                                <span class="diachibds"> FromSoftware Inc.</span>
+                                <div class="divtimebds">
+                                    <span class="timedangbds">25 Tháng 2 năm 2022</span>
+                                    <button class="btnyeuthich"><i class="fa fa-heart active"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="singlebds">
+                            <a href="chitiet.html"><img src="image/2.jpg" class="imgdbs"></a>
+                            <div class="contentbds">
+                                <a href="chitiet.html" class="titlebdssingle">Mua ELDEN RING Shadow of the Erdtree Deluxe Edition</a>
+                                <div class="divprice">
+                                    <span class="pricebds">1.690.000 đ</span>
+                                    <span class="pricebds areabds"><sup></sup> </span>
+                                </div>
+                                <span class="diachibds"> FromSoftware Inc.</span>
+                                <div class="divtimebds">
+                                    <span class="timedangbds">25 Tháng 2 năm 2022</span>
+                                    <button class="btnyeuthich"><i class="fa fa-heart active"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="singlebds">
+                            <a href="chitiet1.html"><img src="image/cs0.jpg" class="imgdbs"></a>
+                            <div class="contentbds">
+                                <a href="chitiet1.html" class="titlebdssingle">Counter-Strike 2 Prime</a>
+                                <div class="divprice">
+                                    <span class="pricebds">375.000₫</span>
+                                    <span class="pricebds areabds"><sup></sup> </span>
+                                </div>
+                                <span class="diachibds"></i>Valve</span>
+                                <div class="divtimebds">
+                                    <span class="timedangbds">22 Tháng 8 năm 2012</span>
+                                    <button class="btnyeuthich"><i class="fa fa-heart active"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="singlebds">
+                            <a href="chitiet1.html"><img src="image/cs0.jpg" class="imgdbs"></a>
+                            <div class="contentbds">
+                                <a href="chitiet1.html" class="titlebdssingle">Counter-Strike 2 Prime</a>
+                                <div class="divprice">
+                                    <span class="pricebds">375.000₫</span>
+                                    <span class="pricebds areabds"><sup></sup> </span>
+                                </div>
+                                <span class="diachibds">Valve</span>
+                                <div class="divtimebds">
+                                    <span class="timedangbds">22 Tháng 8 năm 2012</span>
+                                    <button class="btnyeuthich"><i class="fa fa-heart active"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="singlebds">
+                            <a href="chitiet.html"><img src="image/2.jpg" class="imgdbs"></a>
+                            <div class="contentbds">
+                                <a href="chitiet.html" class="titlebdssingle">Mua ELDEN RING Shadow of the Erdtree Deluxe Edition</a>
+                                <div class="divprice">
+                                    <span class="pricebds">1.690.000 đ</span>
+                                    <span class="pricebds areabds"><sup></sup> </span>
+                                </div>
+                                <span class="diachibds"> FromSoftware Inc.</span>
+                                <div class="divtimebds">
+                                    <span class="timedangbds">Đăng hôm nay</span>
+                                    <button class="btnyeuthich"><i class="fa fa-heart active"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="xemthembds">
+                    <button onclick="loadDsBdsTrangChu()" class="btnxemthem">Mở rộng <i class="fa fa-chevron-down"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+$(document).ready(function() {
+    $('#searchButton').click(function() {
+        const keyword = $('#searchInput').val().toLowerCase();
+        $('#dsbdstrangchu .singlebds').hide();
+        $('#dsbdstrangchu .singlebds').each(function() {
+            const text = $(this).find('.titlebdssingle').text().toLowerCase();
+            if (text.includes(keyword)) {
+                $(this).show();
+            }
+        });
+        var $visibleItems = $('#dsbdstrangchu .singlebds:visible');
+
+        $visibleItems.sort(function(a, b) {
+            var textA = $(a).find('.titlebdssingle').text().toLowerCase();
+            var textB = $(b).find('.titlebdssingle').text().toLowerCase();
+            return textA.localeCompare(textB); 
+        });
+    });
+});
+
+
+    </script>
+
+    <footer id="footer" class="text-center text-lg-start bg-body-tertiary text-muted"></footer>
+</body>
+</html>
